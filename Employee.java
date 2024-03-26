@@ -1,9 +1,9 @@
-public class Empleados {
+public class Employee {
     private String rfc;
     private double salary;
     private String rol;
 
-    public Empleados(String rfc, double salary, String rol) {
+    public Employee(String rfc, double salary, String rol) {
         this.rfc = rfc;
         this.salary = salary;
         this.rol = rol;
