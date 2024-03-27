@@ -26,4 +26,8 @@ public class Person {
     public void setCurp(String curp) {
         this.curp = curp;
     }
+
+    public String showInfo(){
+        return String.format("Nombre completo: %s %s", name, lastname);
+    }
 }
