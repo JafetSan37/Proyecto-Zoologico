@@ -28,6 +28,6 @@ public class Person {
     }
 
     public String showInfo(){
-        return String.format("Nombre completo: %s %s", name, lastname);
+        return String.format("Nombre completo: %s %s, Fecha de nacimiento: %s, CURP: %s", name, lastname, birthDate, curp);
     }
 }
