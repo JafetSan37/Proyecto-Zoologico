@@ -1,8 +1,9 @@
 
+
 import java.util.Scanner;
 public class Visitor extends Person{
     private int totalVisits;
-    private Date registerDate;
+    private final Date registerDate;
     Scanner sc = new Scanner(System.in);
     public Visitor(String name, String lastname, Date birthDate, String curp, Date registerDate){
         super (name, lastname, birthDate, curp);
@@ -59,7 +60,6 @@ public class Visitor extends Person{
         }
         System.out.println("Información guardada: "+ showVisitor());
     }
-    public void deleteVisitor(){}
     public double calculateTicketCost(){
         if(isAnAdult()){
             if(totalVisits%5==0)
@@ -76,7 +76,6 @@ public class Visitor extends Person{
         int actualYear = 2024;
         int personYear = getBirthDate().getYear();
         int visitorsAge = actualYear-personYear;
-        if (visitorsAge>=18){ return true;}
-        else return false;
+        return (visitorsAge >= 18);
     }
 }
