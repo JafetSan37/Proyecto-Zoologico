@@ -31,6 +31,7 @@ public class Person {
     }
 
     public String showInfo(){
-        return String.format("Nombre completo: %s %s, Fecha de nacimiento: %s, CURP: %s", name, lastname, birthDate, curp);
+        String date= Integer.toString(birthDate.getDayOfMonth())+"/" +Integer.toString(birthDate.getMonth())+"/"+Integer.toString(birthDate.getYear());
+        return String.format("Nombre completo: %s %s, Fecha de nacimiento: %s, CURP: %s", name, lastname,date, curp);
     }
 }
