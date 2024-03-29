@@ -1,10 +1,10 @@
 public class Person {
     private String name;
     private String lastname;
-    private String birthDate;
+    private Date birthDate;
     private String curp;
 
-    public Person(String name, String lastname, String birthDate, String curp) {
+    public Person(String name, String lastname, Date birthDate, String curp) {
         this.name = name;
         this.lastname = lastname;
         this.birthDate = birthDate;
@@ -19,8 +19,11 @@ public class Person {
         this.lastname = lastname;
     }
 
-    public void setBirthDate(String birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
+    }
+    public Date getBirthDate() {
+        return birthDate;
     }
 
     public void setCurp(String curp) {
