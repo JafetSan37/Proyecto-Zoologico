@@ -1,17 +1,17 @@
-import java.time.LocalDate;
+
 import java.util.ArrayList;
 public class Animals {
     private long id;
     private String type;
-    private LocalDate arrivalDate;
+    private Date arrivalDate;
     private ArrayList<String> listDiseases = new ArrayList<>();
     private String diet;
-    private LocalDate birthDate;
+    private Date birthDate;
     private double weight;
     private int feedingFrequency;
     private boolean isVaccinated;
 
-    public Animals(long id, String type, LocalDate arrivalDate, String diet, LocalDate birthDate, double weight, int feedingFrequency, boolean isVaccinated) {
+    public Animals(long id, String type, Date arrivalDate, String diet, Date birthDate, double weight, int feedingFrequency, boolean isVaccinated) {
         this.id = id;
         this.type = type;
         this.arrivalDate = arrivalDate;
@@ -33,7 +33,7 @@ public class Animals {
         return type;
     }
 
-    public LocalDate getArrivalDate() {
+    public Date getArrivalDate() {
         return arrivalDate;
     }
 
@@ -45,7 +45,7 @@ public class Animals {
         return diet;
     }
 
-    public LocalDate getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
