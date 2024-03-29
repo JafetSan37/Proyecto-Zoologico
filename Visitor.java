@@ -1,6 +1,5 @@
 
 import java.util.Scanner;
-
 public class Visitor extends Person{
     private int totalVisits;
     private Date registerDate;
@@ -11,26 +10,32 @@ public class Visitor extends Person{
         this.registerDate = registerDate;
     }
     //Setters no le puse porque se supone que fecha de registro ni visitas se pueden modificar
+    public int getTotalVisits() {
+        return totalVisits;
+    }
 
+    public void setTotalVisits(int totalVisits) {
+        this.totalVisits = totalVisits;
+    }
     public String showVisitor (){
         return super.showInfo()+" Total visits: "+totalVisits+" Register date: "+registerDate;
 
     }
-    public void modify(Visitor visitor){
+    public void modify(){
         System.out.println("¿Qué aspecto desea modificar? \n1)Nombre \n2) Apellido\n 3)Fecha de Nacimiento\n 4)CURP");
         int selection = sc.nextInt();
         switch (selection){
             case 1 -> {
                 System.out.println("Ingrese el Nombre: ");
                 String newName = sc.nextLine();
-                visitor.setName(newName);
+                setName(newName);
 
             }
             case 2 -> {
                 System.out.println("Ingrese el Apellido: ");
                 Scanner sc =new Scanner(System.in);
                 String newLastname = sc.nextLine();
-                visitor.setLastname(newLastname);
+                setLastname(newLastname);
             }
             case 3 -> {
                 System.out.println("Ingrese la fecha de Nacimiento: ");
@@ -42,21 +47,21 @@ public class Visitor extends Person{
                 int newDay = sc.nextInt();
 
                 Date newDate = new Date(newDay, newMonth, newYear);
-                visitor.setBirthDate(newDate);
+                setBirthDate(newDate);
             }
             case 4 -> {
                 System.out.println("Ingrese CURP");
                 String newCurp = sc.nextLine();
-                visitor.setCurp(newCurp);}
+                setCurp(newCurp);}
 
             default-> System.out.println("Opción no válida");
 
         }
-        System.out.println("Información guardada: "+ visitor.showVisitor());
+        System.out.println("Información guardada: "+ showVisitor());
     }
     public void deleteVisitor(){}
-    public double calculateTicketCost(Visitor visitor){
-        if(isAnAdult(visitor)){
+    public double calculateTicketCost(){
+        if(isAnAdult()){
             if(totalVisits%5==0)
                 return 100*0.8;
             else return 100;
@@ -67,14 +72,11 @@ public class Visitor extends Person{
             else return 50;
         }
     }
-    public void registerAVisit(){
-
-    }
-    public boolean isAnAdult(Visitor visitor){
+    public boolean isAnAdult(){
         int actualYear = 2024;
-        int personYear = visitor.getBirthDate().getYear();
+        int personYear = getBirthDate().getYear();
         int visitorsAge = actualYear-personYear;
-        if (visitorsAge>18){ return true;}
+        if (visitorsAge>=18){ return true;}
         else return false;
     }
 }
