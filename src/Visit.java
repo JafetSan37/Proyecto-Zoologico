@@ -1,3 +1,5 @@
+package src;
+
 import java.util.ArrayList;
 
 public class Visit {
@@ -8,7 +10,7 @@ public class Visit {
     private int kidsQuanty=kidsQuanty();
     private int adultsQuanty=adultsQuanty();
     private Date visitDate;
-    public Visit(Guide guide,Date visitDate){
+    public Visit(Guide guide, Date visitDate){
         this.guide=guide;
         this.visitDate=visitDate;
     }

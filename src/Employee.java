@@ -1,3 +1,5 @@
+package src;
+
 public class Employee extends Person{
     private String rfc;
     private double salary;

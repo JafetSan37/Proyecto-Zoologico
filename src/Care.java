@@ -1,3 +1,5 @@
+package src;
+
 public class Care {
     private String employeeInCharge;
     private String processRealized;

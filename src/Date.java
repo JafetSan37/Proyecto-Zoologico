@@ -1,3 +1,5 @@
+package src;
+
 public class Date {
     private int dayOfMonth;
     private int month;
