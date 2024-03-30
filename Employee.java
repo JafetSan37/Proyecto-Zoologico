@@ -15,7 +15,7 @@ public class Employee extends Person{
     }
 
     public String showEmployee (){
-        return super.showInfo()+" RFC: "+rfc+" Salary: $"+salary+"Position: "+rol; //esta llamando el metodo de clase padre y le concatena los atributos de esta clase
+        return super.showInfo()+" RFC: "+rfc+" Salary: $"+salary+" Position: "+rol; //esta llamando el metodo de clase padre y le concatena los atributos de esta clase
 
     }
 }
